@@ -1,5 +1,16 @@
 async function setup() {
-  // Nothing for the moment
+  const popoverElement = document.querySelector('[popover]');
+  popoverElement.addEventListener(
+    'click',
+    (event) => {
+      if (event.target.tagName === 'BUTTON') {
+        setTimeout(() => {
+          alert(`You have clicked on button: ${event.target.textContent}`);
+        }, 150);
+      }
+    },
+    false,
+  );
 }
 
 if (document.readyState === 'loading') {
