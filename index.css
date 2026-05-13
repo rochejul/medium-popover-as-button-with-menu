@@ -59,6 +59,7 @@ button {
   bottom: calc(anchor(top) + 1rem);
   align-self: anchor-center;
   justify-self: anchor-center;
+  position-anchor: --menu; /* Important to have a smooth animation (and so we should declare anchor-name on the button */
 
   /* Animation */
   opacity: 1;
