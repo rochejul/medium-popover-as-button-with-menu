@@ -60,6 +60,21 @@ button {
   align-self: anchor-center;
   justify-self: anchor-center;
 
+  /* Animation */
+  opacity: 1;
+  transition: opacity .5s ease-in, bottom .5s ease-in, display .5s ease-in;
+  transition-behavior: allow-discrete; /* For exit */
+
+  &:not(:popover-open) {
+    bottom: anchor(bottom);
+    opacity: 0;
+  }
+
+  @starting-style { /* Add properties to animate on opening */
+    bottom: anchor(bottom);
+    opacity: 0;
+  }
+
   /* Content */
   & button {
     width: 10rem;
