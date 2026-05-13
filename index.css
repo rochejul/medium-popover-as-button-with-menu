@@ -43,17 +43,22 @@ button {
       inset -1px -1px 2px lightgrey;
   }
 
-  &[name="menu"] {
+  &[name='menu'] {
     anchor-name: --menu;
   }
 }
 
-[popover="auto"] {
+[popover='auto'] {
   background: lightslategray;
   border-radius: 0.5rem;
   box-shadow: 1px 1px 3px lightslategray;
   border: none;
   text-align: center;
+
+  /* Anchoring */
+  bottom: calc(anchor(top) + 1rem);
+  align-self: anchor-center;
+  justify-self: anchor-center;
 
   /* Content */
   & button {
