@@ -11,7 +11,14 @@
   </head>
 
   <body>
-    <button popovertarget="mypopover">Toggle the popover</button>
-    <div id="mypopover" popover>Popover content</div>
+    <button name="menu" popovertarget="mypopover">Menu A</button>
+    <div id="mypopover" popover="auto">
+      <div>
+        <button popovertarget="mypopover" popovertargetaction="hide">Option A</button>
+      </div>
+      <div>
+        <button popovertarget="mypopover" popovertargetaction="hide">Option B</button>
+      </div>
+    </div>
   </body>
 </html>
